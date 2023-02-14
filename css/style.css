@@ -545,25 +545,25 @@
   font-weight: 400;
 }
 .container .youtube .inquiry > span {
-  font-size: 5vw;
+  font-size: 2.7rem;
   font-weight: 600;
   font-family: "Pretendard";
 }
 .container .youtube .inquiry > b {
   display: block;
   margin-top: 30px;
-  font-size: 7vw;
+  font-size: 3.7rem;
   letter-spacing: -0.4;
   margin-bottom: 58px;
 }
 .container .youtube .inquiry > p {
-  font-size: 4vw;
+  font-size: 2rem;
   display: inline-block;
   font-family: "Pretendard";
 }
 .container .youtube .inquiry > dt {
   font-weight: 600;
-  font-size: 4vw;
+  font-size: 2rem;
   display: inline-block;
   font-family: "Pretendard";
 }
@@ -618,7 +618,7 @@
 }
 .container .footer-bottom-last img {
   display: inline-block;
-  height: 4.7vw;
+  height: 2.5rem;
   transition-duration: 0.4s;
   transform: rotate(180deg);
   vertical-align: bottom;
@@ -662,7 +662,7 @@
   flex-wrap: wrap;
   height: 100%;
   align-items: center;
-  font-size: 3.4vw;
+  font-size: 1.7rem;
 }
 .container .footer-info-sub li:last-child:after, .container .footer-info-sub li:nth-child(3):after {
   content: "";

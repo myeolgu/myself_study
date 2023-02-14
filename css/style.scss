@@ -536,25 +536,25 @@
 				}
 			}
 			> span {
-				font-size: 5vw;
+				font-size: 2.7rem;
 				font-weight: 600;
 				font-family: 'Pretendard';
 			}
 			> b {
 				display: block;
 				margin-top: 30px;
-				font-size:7vw;
+				font-size:3.7rem;
 				letter-spacing: -0.4;
 				margin-bottom: 58px;
 			}
 			> p {
-				font-size:4vw;
+				font-size:2rem;
 				display: inline-block;
 				font-family: 'Pretendard';
 			}
 			> dt {
 				font-weight: 600;
-				font-size:4vw;
+				font-size:2rem;
 				display: inline-block;
 				font-family: 'Pretendard';
 			}
@@ -614,7 +614,7 @@
 					}
 					img {
 						display: inline-block;
-						height: 4.7vw;
+						height: 2.5rem;
 						transition-duration: 0.4s;
 						transform: rotate(180deg);
 						vertical-align: bottom;
@@ -663,7 +663,7 @@
 				flex-wrap: wrap;
 				height: 100%;
 				align-items: center;
-				font-size:3.4vw;
+				font-size:1.7rem;
 				li:last-child:after, li:nth-child(3):after {
 					content:'';
 				}
