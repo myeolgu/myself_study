@@ -10,7 +10,7 @@
 	height: 30px;
 }
 
-.container .quickCategory-box li a {
+.container .quickcategorylist-box li a {
 	position: relative;
 	margin:0 auto;
 	width: 55px;
@@ -38,33 +38,105 @@
 .icon-botsns-04 { background-position: 0 -90px; }
 
 
+// blind text 작성
+
+.blind-text {
+	position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
 .container {
   position:relative;
   margin:0 auto;
-  max-width: 720px;
+  // max-width: 720px;
   overflow: hidden;
-  .gnb {
+  .navbar-header {
     position:relative;
     width:100%;
 	&-menu {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding:2rem;
+		padding:1rem 2rem;
+		li:nth-child(2) > a {
+			background-image: url('../images/common/toplogo.jpg');
+			width: 81px;
+			height: 40px;
+			overflow: hidden;
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: 50%;
+		}
+		&-line {
+			position: relative;
+			height: 2px;
+			width: 21px;
+			display: block;
+			background-color: #58595b;
+			cursor: pointer;
+			&::after {
+				content: '';
+				position: absolute;
+				display: block;
+				width: 18px;
+				height: 2px;
+				background-color: #58595b;
+				transform: translate(0, 8px);
+			}
+			&::before {
+				content: '';
+				position: absolute;
+				display: block;
+				width: 100%;
+				height: 2px;
+				background-color: #58595b;
+				transform: translate(0, -8px);
+			}
+		}
 		li {
 			display: flex;
+			flex: 0 0 33%;
+			&:nth-child(2) {
+				justify-content: center;
+			}
+
+			&:last-child {
+				justify-content: flex-end;
+				a {
+					background-image: url('../images/common/search.png');
+					width: 26px;
+					height: 26px;
+					overflow: hidden;
+					background-repeat: no-repeat;
+					background-size: contain;
+				}
+				img {
+					width: 22px;
+					height: 22px;
+					position: relative;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+			}
+			
 		}
-		li img {
-			position:relative;
-			left:50%;
-			transform: translate(-50%);
-			max-width:70%;
-		}
+
+		// li img {
+		// 	position:relative;
+		// 	left:50%;
+		// 	transform: translate(-50%);
+		// 	max-width:70%;
+		// }
 	}
+
 
 	}
 
-	.swiper-top-container {
+	.swiper {
 		width:100%;
 		height: auto;
 		margin-bottom: -45px;
@@ -94,14 +166,12 @@
 				align-items: center;
 				width:100%;
 				img {
-					max-width: 100%;
-					max-height: 100%;
-					object-fit: contain;
+					width: 100%;
 				}
 			}
 		}
 
-		.pagination-custom {
+		.swiper-pagination-custom-1 {
 			position: relative;
 			width:110px;
 			height: auto;
@@ -116,7 +186,7 @@
 	}
   }
 
-  .quickCategory {
+  .quickcategorylist {
 	position: relative;
 	width:100%;
 	height: auto;
@@ -137,9 +207,7 @@
 		}
 		li {
 			text-align: center;
-
-			width: 24%;
-			height: 48%;
+			flex:0 0 25%;
 			display: flex;
     		flex-direction: column;
     		justify-content: center;
@@ -147,7 +215,7 @@
 	}
   }
 
-  .separateCategory {
+  .separatecategory {
 	position: relative;
 	background-color: #f6f6f6;
 	padding:2rem 2rem 4rem 2rem;
@@ -167,7 +235,6 @@
 			overflow: hidden;
 			.pagination-box {
 				position: relative;
-
 			}
 			.swiper-pagination2 {
 				bottom: 0px !important;
@@ -182,7 +249,6 @@
 					font-size: 18px;
 					background: #fff;
 					height: calc((100% - 30px) / 2) !important;
-					/* Center slide text vertically */
 					display: flex;
 					justify-content: space-between;
 					align-items: center;
@@ -207,10 +273,14 @@
 						box-sizing: border-box;
 						background-color: white;
 						z-index: 3;
-
 						span {
+							display: inline-block;
+							width: 100%;
+							overflow: hidden;
 							font-weight: 500;
 							font-size:2.6vw;
+							white-space: nowrap;
+							text-overflow: ellipsis;
 						}
 						p {
 							font-size:2.4vw;
@@ -286,9 +356,8 @@
 							transform: scale(1.4);
 						}
 					}
-
-
 					.alt {
+						display: inline-block;
 						width:100%;
 						height: 150px;
 						padding: 2rem;
@@ -296,12 +365,15 @@
 						background-color: white;
 						z-index: 3;
 						overflow: hidden;
+						white-space: nowrap;
+						text-overflow: ellipsis;
 						dt {
 							font-family: 'Pretendard';
 							font-size: 3vw;
 							font-weight: 600;
 						}
 						span {
+							display: inline-block;
 							font-family: 'Pretendard';
 							font-size: 2.6vw;
 							font-weight: 600;

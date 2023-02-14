@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    let swiper = new Swiper(".mySwiper", {
+    let swiper = new Swiper(".swiper-event-1", {
       autoplay: {
       delay:3000,
     },
